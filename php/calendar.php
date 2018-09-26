@@ -207,7 +207,7 @@ session_start();
     /// PART CALENDAR LEFT ###########################################################
     $('#calendar-left').fullCalendar({
       //themeSystem: 'jquery-ui',
-      googleCalendarApiKey: 'AIzaSyCb7F3cZOnQ-gmZCbFmjU6Z3DuBfe23jMo',
+      googleCalendarApiKey: 'The KEY TO PUT ', // 
       header :{
         left: 'prev,next',
         center: 'title',
@@ -305,7 +305,7 @@ session_start();
       //scrollTime: "06:00:00",
       editable: true, //Allows for drag and drop events
       eventLimit: true, //When there are more events than the day can hold, compress to a list
-      googleCalendarApiKey: 'AIzaSyCb7F3cZOnQ-gmZCbFmjU6Z3DuBfe23jMo', //pull Google Calendar Events
+      googleCalendarApiKey: '', //pull Google Calendar Events
 
       defaultView: 'agendaWeek',
       header: {
