@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+/*****GLOBAL*****/
+body, html {
+	font-family: 'Quicksand', sans-serif;
+	background-color: white; 
+	/* rgb(0,43,54); */
+	background-size: cover;
+	background-position: center;
+	color: rgb(131,148,150);
+}
+
+button:focus {
+    outline: none;
+    background-color: rgb(120,194,173);
+}
+
+/*****CLASSES*****/
+.main-header {
+
+}
+
+.fc-day-header {
+	/* color: white !important; */
+}
+.fc th, .fc td {
+	border-color: rgba(120, 120, 120, 0.2) !important; 
+	/* rgb(131,118,150); */
+}
+/* 
+.fc-event-dot:hover, .fc-event-dot:focus {
+	background-color: rgba(60, 60, 60, 1);
+} */
+
+.fc-state-default {
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	background-image: unset;
+	background-color: rgb(120,194,173);
+	box-shadow: unset;
+	border: unset;
+}
+
+.fc-state-default:hover {
+	background-color: rgb(94, 170, 149);
+	transition-delay: 5000ms;
+}
+
+.fc-next-button {
+
+}
+.fc-icon.fc-icon-right-single-arrow {
+  
+}
+  
+
+
+/*****IDs*****/
+#container-width {
+	margin: 0 auto;
+	max-width: 100%;
+	width: 100%;
+}
+
+#calendar-left {
+	padding: 0.4rem;
+	margin-top: 0.4rem;
+	border-radius: 5px 5px 0 0;
+}
+
+
+
+#calendar-right {
+	border-radius: 1px;
+	padding: 0.4rem;
+}
+
+#calendar-container {
+	margin: 0;
+}
+
+#calendar-section {
+	padding: 0;
+}
+
+#navbar {
+	background-color: rgb(60, 60, 78);
+}

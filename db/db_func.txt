@@ -1,0 +1,51 @@
+CREATE TABLE users (
+	username VARCHAR(128) PRIMARY KEY,
+	password VARCHAR(128) NOT NULL
+);
+
+CREATE TABLE user_info (
+	info_id INT AUTO_INCREMENT PRIMARY KEY,	
+	username VARCHAR(128) NOT NULL,
+	first_name VARCHAR(128),
+	last_name VARCHAR(128),
+	email VARCHAR(128) NOT NULL,
+	phone VARCHAR(10),
+	CONSTRAINT FK_user_info_username FOREIGN KEY (username) REFERENCES users(username)
+);
+
+CREATE TABLE calendar (
+	calendar_id INT AUTO_INCREMENT PRIMARY KEY,
+	calendar_name VARCHAR(128),
+	calendar_group VARCHAR(128) DEFAULT NULL
+);
+
+
+CREATE TABLE calendar_rights (
+	rights_id INT AUTO_INCREMENT PRIMARY KEY,
+	calendar_id INT NOT NULL,
+	username VARCHAR(128) NOT NULL,
+	permission BIT,
+	CONSTRAINT FK_calendar_rights_username FOREIGN KEY (username) REFERENCES users(username),
+	CONSTRAINT FK_calendar_rights_calendar_id FOREIGN KEY (calendar_id) REFERENCES calendar(calendar_id)
+);
+
+CREATE TABLE calendar_events (
+	event_id INT AUTO_INCREMENT PRIMARY KEY,
+	calendar_id INT,
+	title VARCHAR(255) DEFAULT default,	
+	start_date DATETIME,
+	end_date DATETIME,
+	all_day INT(1) DEFAULT 0,
+	description VARCHAR(255) DEFAULT nodescription,
+	color VARCHAR(128) DEFAULT blue,
+	text_color VARCHAR(128) DEFAULT white,
+	CONSTRAINT FK_calendar_events_calendar_id FOREIGN KEY (calendar_id) REFERENCES calendar(calendar_id)
+);
+
+CREATE TABLE google_calendar (
+	username VARCHAR(128),
+	google_calendar VARCHAR(200),
+
+	PRIMARY KEY(username, google_calendar),
+	CONSTRAINT FK_google_calendar_username FOREIGN KEY (username) REFERENCES users(username)
+);

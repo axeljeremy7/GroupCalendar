@@ -1,0 +1,44 @@
+.fa {
+    padding: 20px;
+    padding-left: 0px;
+    font-size: 3em;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(186, 186, 186, .6);
+}
+
+footer a:hover {
+    opacity: 1 !important;
+    text-decoration: none;
+    -webkit-transform: scale(1.2)!important;
+    -ms-transform: scale(1.2)!important;
+    transform: scale(1.2)!important;
+}
+
+footer .fa-facebook:hover {
+  color: rgb(59, 82, 132);
+}
+
+footer .fa-twitter:hover {
+  color: rgb(120, 166, 226);
+}
+
+footer .fa-snapchat:hover {
+  color: rgb(228, 232, 120);
+}
+
+footer .fa-instagram:hover {
+  background: -webkit-linear-gradient(right top, #d378c9, #d8cf8a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.socialLinks {
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(60, 60, 78);
+  padding-bottom: .5em;
+  padding-top: .25em;
+}
